@@ -1,0 +1,461 @@
+@import "bourbon"
+@import "vars.sass"
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/owl/assets/owl.carousel"
+@import "app/libs/fontawesome/font-awesome.min"
+@import "app/libs/lightbox/css/lightbox"
+@import "app/libs/magnific-popup/magnific-popup"
+
+
+*::-webkit-input-placeholder
+	color: #0d1218
+	opacity: 1
+
+*:-moz-placeholder
+	color: #0d1218
+	opacity: 1
+
+*::-moz-placeholder
+	color: #0d1218
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #0d1218
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #0d1218
+body input:required:valid,
+body textarea:required:valid
+	color: #0d1218
+
+//Custom Styles Here
+.home-blog
+	padding: 30px 0
+	text-align: center
+	.descr
+		color: #e5e2e2
+		font-family: "RobotoBold", sans-serif
+		font-size: em(13)
+
+.slider
+	text-align: center
+	position: relative
+	.slide-ver
+		.img-wrap
+			width: 50%
+			display: inline-block
+			float: left
+			overflow: hidden
+			position: relative
+			img
+				width: auto
+		.descr-wrap
+			padding-top: 80px
+			width: 50%
+			display: inline-block
+			.button
+				margin: 0px 0 20px
+	.slide-hor
+		img
+			width: 100%
+			max-height: 360px
+			margin: 0 auto
+	.slide
+		background-color: $box_c
+		margin: 0 0 30px
+		h2
+			margin-bottom: 0
+		p
+			padding: 10px 50px 30px
+			color: #e1dede
+			font-family: "RobotoRegular", sans-serif
+			font-size: em(16)
+			line-height: em(18)
+			text-align: justify
+		.button
+			margin: 0px 0 30px
+	.owl-controls
+		background-color: $main_color
+		.owl-dot
+			margin: 30px 10px
+			display: inline-block
+			width: 18px
+			height: 18px
+			border-radius: 10em
+			background-color: transparent
+			border: 3px solid $accent
+		.owl-dot.active
+			background-color: $accent
+			width: 18px
+			height: 18px
+			border-radius: 10em
+
+
+.button,
+button
+	font-family: "RobotoRegular", sans-serif
+	font-size: em(13)
+	text-decoration: none
+	background-color: $accent
+	border-radius: 3px
+	color: $text_c
+	padding: 10px 22px
+	box-shadow: 0 3px 0 darken($accent, 15%)
+	transition: 0.3s
+	display: inline-block
+	text-transform: uppercase
+	&:hover,
+	&:focus
+		color: $text_c
+		text-decoration: none
+		background-color: lighten($accent, 5%)
+	&:active
+		background-color: darken($accent, 15%)
+		transform: translateY(3px)
+
+.btn_grey
+	background-color: $box_c
+	box-shadow: 0 3px 0 darken($box_c, 15%)
+	&:hover,
+	&:focus
+		background-color: lighten($box_c, 5%)
+	&:active
+		background-color: darken($box_c, 15%)
+
+footer
+	background-color: #342828
+	margin: 0
+	padding: 20px 0
+	text-align: center
+	position: relative
+	overflow: hidden
+	.contacts
+		position: relative
+		margin: 10px 0 20px
+		font-size: em(14)
+		color: #8f8c8c
+		z-index: 1
+		a
+			color: #8f8c8c
+			&:hover,
+			&:active,
+			&:focus
+				color: $accent
+			&:visited
+				color: #8f8c8c
+		.fa
+			margin: 0 10px
+	p
+		font-size: em(13)
+		font-family: 'RobotoRegular', sans-serif
+		color: #8f8c8c
+		margin: 0
+.slider		
+	.owl-nav
+		position: absolute
+		top: 45%
+		width: 100%
+		>div
+			height: 29px
+			width: 16px
+			background-image: url(../img/slider_arrows.png)
+			position: absolute
+			left: 5%
+		.owl-next
+			background-position: 16px 0
+			left: 95%
+
+.gallery-wrap
+	margin-top: 40px
+
+.sold
+	&::after
+		position: absolute
+		content: ''
+		top: -2px
+		left: 5px
+		background-image: url(../img/sold.png)
+		background-repeat: no-repeat
+		z-index: 3
+		height: 67px
+		width: 111px
+
+.about-img-wrap
+	text-align: center
+	overflow: hidden
+	img
+		max-width: 100%
+		border: 7px solid #90b8cf
+		border-radius: 3px
+
+.item-wrap
+	display: table
+	margin-bottom: 10px
+	width: 100%
+	.content-text
+		display: table-cell
+		vertical-align: top
+		font-family: 'RobotoLight', sans-serif
+		color: $text_c
+		h3
+			margin: 0 auto 10px
+			text-align: right
+			line-height: 24px
+		p
+			font-size: em(15)
+	.left-col
+		float: right
+		.content-text
+			padding-right: 30px
+	.right-col
+		.content-text
+			padding-left: 30px
+	.item-icon
+		display: table-cell
+		position: relative
+		p
+			position: absolute
+			top: 15px
+			left: 0
+			margin: 0
+			font-family: 'RobotoBold', sans-serif
+			font-size: em(13)
+			line-height: 13px
+			width: 100%
+			height: 100%
+			text-align: center
+			span
+				font-family: 'RobotoMedium', sans-serif
+				font-size: 11px
+	.right-item
+		text-align: right
+	.left-item
+		text-align: left
+		h3
+			text-align: left
+.additional
+		.item-wrap
+			&:last-child
+				margin-top: 0
+
+.critic
+	margin-bottom: 50px
+	h2
+		margin-top: 0
+	.critic-text
+		background-color: $box_c
+		padding: 30px 30px
+		p
+			line-height: 28px
+			text-indent: 30px
+			margin: 0
+		span
+			font-family: 'Carolina', sans-serif
+			font-size: 30px
+			display: block
+			float: right
+	.critic-paint
+		overflow: hidden
+
+.contacts-wrap
+	p
+		font-family: 'RobotoLight', sans-serif
+		font-size: em(22)
+		line-height: em(26)
+		letter-spacing: 0.1em
+		margin-bottom: 70px
+	ul
+		list-style-type: none
+		margin: 0
+		padding: 0
+		color: $accent
+		li
+			position: relative
+			margin: 30px 0
+			.fa
+					position: absolute
+					font-size: 24px
+					&-mobile
+						font-size: 30px
+						top: 7px
+						left: 11px
+					&-envelope-o
+						top: 10px
+						left: 5px
+					&-facebook
+						top: 10px
+						left: 10px
+			a
+				color: $accent
+				font-family: 'RobotoBold', sans-serif
+				font-size: em(24)
+				margin-left: 50px
+
+.form
+	background-color: $box_c
+	padding: 35px 25px 25px
+	text-align: left
+	max-width: 360px
+	margin:  20px auto 40px
+	position: relative
+	.success
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 10
+		background-color: #FFF
+		text-align: center
+		color: #222
+		padding: 50px 
+		align-items: center
+		display: none
+		&.visible
+			display: flex
+	h5
+		font-family: "OpenSansBold", sans-serif
+		font-size: em(18)
+		line-height: em(40)
+		text-transform: uppercase
+		margin: 0
+		text-align: center
+		color: #fff
+	input, textarea
+		display: block
+		width: 100%
+		background-color: #e5e2e2
+		border: none
+		padding: 8px 0
+		text-indent: 10px
+		color: #0d1218
+		margin-bottom: 20px
+		border-radius: 3px
+		font-family: 'OpenSansSemiBold', sans-serif
+		font-size: em(15)
+		line-height: em(24)
+		resize: none
+		&:active, &:focus
+			box-shadow: 0 -4px 0 #453c3c
+			transition: all 0.25s ease
+	span
+		font-size: em(13)
+		color: #343536
+		letter-spacing: 0.14em
+		line-height: em(23)
+	.button-wrap
+		text-align: center
+		button
+			border: none
+
+.thank-msg
+	text-align: center
+	font-family: 'RobotoBold', sans-serif
+	.fa
+		font-size: 80px
+		color: $accent
+	.button
+		margin: 30px auto 50px
+
+			
+//replace addons param
+.mfp-fade.mfp-bg 
+	opacity: 0
+	transition: all 0.45s ease-out
+/* overlay animate in */
+.mfp-bg.mfp-ready
+	opacity: 0.8
+/* overlay animate out */
+.mfp-bg.mfp-removing
+	opacity: 0
+/* content at start */
+.mfp-wrap
+	.mfp-content
+		opacity: 0
+		transition: all 0.45s ease-out
+/* content animate it */
+.mfp-wrap.mfp-ready 
+	.mfp-content
+		opacity: 1
+/* content animate out */
+.mfp-wrap.mfp-removing
+	.mfp-content
+		opacity: 0
+.mfp-content
+	.mfp-close
+		&:hover
+			background-color: transparent
+			cursor: pointer
+.mfp-zoom-out-cur,
+	cursor: auto
+
+
+
+.grid
+	max-width: 1800px
+	margin: 0px auto 50px
+
+	
+
+.grid-sizer,
+.grid-item
+	box-size: border-box
+	width: 20%
+	@media screen and (max-width: 1200px)
+		width: 25%
+	@media screen and (max-width: 768px)
+		width: 33%
+	@media screen and (max-width: 480px)
+		width: 50%
+.grid-item--width2
+	width: 40%
+	@media screen and (max-width: 1200px)
+		width: 50%
+	@media screen and (max-width: 768px)
+		width: 66%
+	@media screen and (max-width: 480px)
+		width: 100%
+
+.grid-item
+	float: left
+	padding: 5px
+	overflow: hidden
+	position: relative
+	img
+		display: block
+		max-width: 100%
+		border: 4px solid lighten($box_c, 30%)
+	.scale:hover
+		transform: scale(1.02)
+		transition: all 0.6s ease
+	.sold:hover::after
+		transition: all 0.6s ease
+		top: -7px
+		left: 0px
+
+
+.lightboxOverlay
+	opacity: .9
+
+#infscr-loading
+	width: 100%
+	display: inline-block
+	text-align: center
+	position: absolute
+	background-color: $accent
+	bottom: -48px
+	left: 0
+	img
+		height: 18px
+		width: 18px
+	
+
+//ALWAYS END
+@import "media"
+
+

@@ -1,0 +1,74 @@
+@import "bourbon"
+@import "vars.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoRegular", sans-serif
+	overflow-x: hidden
+	background-color: $main_color
+	color: $text_c
+
+.hidden
+	display: none
+
+h1, h2, h3, h4, h5, h6
+	font-family: 'RobotoLight', sans-serif
+	text-align: center
+
+h2
+	font-size: em(30)
+h3
+	font-size: em(24)
+img
+	border: none
+a,
+a:hover,
+a:active,
+a:focus
+	outline: 0
+
+header
+	height: 720px
+	overflow: hidden
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	position: relative
+	&:before
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		content: ''
+		position: absolute
+		background: rgba(34, 34, 34, .4)
+		z-index: 2
+		
+.top-line
+	background: rgba(69, 60, 60, .75)
+	position: relative
+	z-index: 3
+
+.nav
+	list-style-type: none
+	font-family: 'RobotoLight', sans-serif
+	text-align: right
+	font-size: em(14)
+	padding: 0
+	margin: 0
+	li
+		display: inline-block
+		padding: 40px 0
+		a
+			color: #fff
+			padding: 40px 30px
+			&:hover
+				color: $accent
+	li.active
+		a
+			color: $accent
+
+
