@@ -19,7 +19,7 @@ $(function() {
 	//resize slider
 
 	var slideH = $('.slide-hor').height();
-	var imgH = $('.slide-ver img');
+	var imgH = $('.new-ver img');
 	imgH.css('height', slideH);
 
 
@@ -41,8 +41,15 @@ $(function() {
 					 	nav: true,
 					 	navText: "",
 					 	animateOut: 'fadeOut',
-            }
-
+					 	onInitialize : function(element){
+		        owl.children().sort(function(){
+		            return Math.round(Math.random()) - 0.5;
+			        }).each(function(){
+			            $(this).appendTo(owl);
+			        });
+	        	}
+    		}
+    		
     if ( $(window).width() > 760 ) {
         var owlActive = owl.owlCarousel(owlOptions);
     } else {
@@ -115,10 +122,17 @@ $(function() {
   var $criticHeight = $('.critic-text').height();
   var $imgHeight = $('.critic-paint');
   $(window).resize(function() {
-  	$item.css('height','auto');
-	  $item.equalHeights();
+  	if($(window).width() > 992){
+  		$item.css('height','auto');
+	  	$item.equalHeights();
+	  }else{
+	  	$item.css('height','auto');
+	  }
 	});
-  $item.equalHeights();
+	if($(window).width() > 992){
+		 $item.equalHeights();
+	}
+ 
 
   $(window).resize(function() {
   	var $criticHeight = $('.critic-text').height();

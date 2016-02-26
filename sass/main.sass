@@ -43,26 +43,29 @@ body textarea:required:valid
 .slider
 	text-align: center
 	position: relative
-	.slide-ver
+	.img-wrap
+		.sold
+			&:after
+				top: -13px
+				left: -3px
+	.new-ver
 		.img-wrap
 			width: 50%
-			display: inline-block
-			float: left
 			overflow: hidden
-			position: relative
-			img
-				width: auto
+			float: left
+			display: inline-block
 		.descr-wrap
-			padding-top: 80px
+			padding-top: 150px
 			width: 50%
 			display: inline-block
-			.button
-				margin: 0px 0 20px
+			img
+				width: auto
 	.slide-hor
 		img
-			width: 100%
+			width: auto
 			max-height: 360px
 			margin: 0 auto
+			display: inline-block
 	.slide
 		background-color: $box_c
 		margin: 0 0 30px
@@ -156,17 +159,18 @@ footer
 .slider		
 	.owl-nav
 		position: absolute
-		top: 45%
+		top: 40%
 		width: 100%
 		>div
 			height: 29px
 			width: 16px
 			background-image: url(../img/slider_arrows.png)
 			position: absolute
-			left: 5%
+			left: 3%
 		.owl-next
 			background-position: 16px 0
-			left: 95%
+			left: auto
+			right: 3%
 
 .gallery-wrap
 	margin-top: 40px
@@ -182,6 +186,8 @@ footer
 		z-index: 3
 		height: 67px
 		width: 111px
+
+		
 
 .about-img-wrap
 	text-align: center
@@ -331,8 +337,7 @@ footer
 		width: 100%
 		background-color: #e5e2e2
 		border: none
-		padding: 8px 0
-		text-indent: 10px
+		padding: 8px 10px
 		color: #0d1218
 		margin-bottom: 20px
 		border-radius: 3px
@@ -340,6 +345,7 @@ footer
 		font-size: em(15)
 		line-height: em(24)
 		resize: none
+		overflow-x: hidden
 		&:active, &:focus
 			box-shadow: 0 -4px 0 #453c3c
 			transition: all 0.25s ease
@@ -434,7 +440,6 @@ footer
 		transform: scale(1.02)
 		transition: all 0.6s ease
 	.sold:hover::after
-		transition: all 0.6s ease
 		top: -7px
 		left: 0px
 
